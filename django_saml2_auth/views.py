@@ -89,6 +89,9 @@ def _get_saml_client(domain):
     if 'METADATA_AUTO_CONF_URL' in settings.SAML2_AUTH:
         saml_settings['metadata']['remote'] = settings.SAML2_AUTH['METADATA_AUTO_CONF_URL']
 
+    if 'METADATA_AUTO_CONF_INLINE' in settings.SAML2_AUTH:
+        saml_settings['metadata']['inline'] = settings.SAML2_AUTH['METADATA_AUTO_CONF_INLINE']
+
     if 'METADATA_AUTO_CONF_LOCAL' in settings.SAML2_AUTH:
         saml_settings['metadata']['local'] = settings.SAML2_AUTH['METADATA_AUTO_CONF_LOCAL']
 
